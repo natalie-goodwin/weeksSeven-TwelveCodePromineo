@@ -1,0 +1,35 @@
+body {
+    background-color: blue;
+}
+
+
+#text-2 {
+    color: red;
+}
+
+.box {
+    border: solid;
+    border-radius: 3px;
+    border-width: 1px;
+    margin: 25%;
+    background-color: green;
+   
+}
+
+li:hover {
+    background-color: white;
+}
+
+table { 
+    border-collapse: collapse;
+    width: 100%
+}
+
+td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid black;
+}
+tr:nth-child(3n+3) {
+    background-color: gray;
+}

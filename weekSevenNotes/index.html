@@ -1,0 +1,173 @@
+<!--Notes for HTML
+    User Interface: part of the computer users interact 
+    with by clicking buttons and entering information;
+    the backend is what happens behind the scenes that the 
+    user does not see
+    displaying of data, buttons, text fields, and 
+    calculations surrounding these items are part of 
+    the front end; front end is the user interface: the part
+    of the application running on the user/client' computer; 
+    front end development involves building an application 
+    that runs on a users computer using HTML, CSS, and 
+    JavaScript
+
+HTML: Hyper Text Markup Language = text and structure of a 
+    website or front end application
+CSS: Cascading Style Sheets = beautification and design
+    of the site
+JavaScript = functionality and movement of the site 
+
+HTML runs in a web browser; to render it, you need a 
+web browser to open it; uses.html extension; uses elements
+to organize, structure, and display content; elements have 
+opening and closing tags in most cases; there are instances
+of one tag <br>; but mostly opening <> and closing </> tags.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Week Seven Notes Promineo: HTML</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    
+    <body class="container"> 
+        <!-- everything between an opening and closing tag 
+        is part of the content of that element; we can 
+        nest elements inside other elements, and elements 
+        can be described with attributes; 
+        (class+"container") is an element attribute that
+        helps better define the element-->
+    <p>Paragraph tag</p>
+    <h1>H1</h1>
+    <h2>H2</h2>
+    <h3>H3</h3>
+    <h4>H4</h4>
+    <h5>H5</h5>
+    <h6>H6</h6>
+    <p>Regular text
+    <i>italicized</i>
+    <em>emphasized</em>
+    <sup>superscript</sup>
+    <sub>subscript</sub></body></html>
+    <b>bold</b></p>
+    </body>
+    <!--This is a comment; it will not be redered by the 
+        web browser-->
+
+</html>
+
+<!--Text Elements: headings, paragraphs and formatting 
+    elements -->
+<!--Anchors and Images: attributes pointing to the address
+    of the image being displayed, or to the location where the
+    link will redirect the user web click; absolute path to the 
+    directory/address: exact address of where something lives;
+    a url that goes to a specific page on a specific website is an 
+    absolute path; relative path to a directory/address: pointing
+    to something relative to where we are = points to a directory
+    that is two directories up from the director where our HTML
+    file is located if it is on the same server, as opposed to
+    to putting the exact address on the internet to where the 
+    resource is -->
+
+<!--Absolute Path: takes us directly to the website in
+    the anchor--> 
+<a href="https://google.com">Google</a> <br><!--Absolute Path-->
+
+<!--Relative Path: creates a link inside the HTML page that 
+    links additional pages for the website (in other words, 
+    if you create multiple folders, pages, or store images 
+    within a code editing software directory, you can link those pages and images to the
+    html page; this is a relative path: the files are in the same
+    directory and being linked to one another-->
+
+<a href="page2.html">Page 2</a> <br><!--Relative Path: direct page link-->
+<a href="pages/page3.html">Page 3</a> <br><!--Relative Path: page in folder link-->
+<img src="cat.jpg" alt="Cat"> <!--No image in directory: but it would
+    still be a relative path -->
+
+<img src="https://static9.depositphotos.com/1594920/1088/i/450/depositphotos_10888323-stock-photo-british-shorthair-cat-7-months.jpg" alt="">
+
+<!--Lists-->
+    <ol>
+        <li>Cat</li>
+        <li>Dog</li>
+        <li>Fish</li>
+    </ol> <!--ordered list has numbers-->
+
+    <ul>
+        <li>Sam</li>
+        <li>Tommy</li>
+        <li>Paul</li>
+    </ul> <!--unordered list: has bullets-->
+<!--Tables-->
+<table>
+    <tr>
+        <th>Product</th>
+        <th>Price</th>
+        <th>Quantity</th>
+    </tr>
+    <tr>
+        <td>Apple</td>
+        <td>0.35</td>
+        <td>5</td>
+    </tr>
+    <tr>
+        <td>Bread</td>
+        <td>2.35</td>
+        <td>12</td>
+    </tr>
+</table>
+
+<!--Inline Vs. Block-->
+
+<!--A block element takes up the entire width of its 
+    parent: if there is more than one element on a 
+    line, even if there is enough space for both elements,
+    the second image will take upm a new line; with 
+    inline elements, multiple elements can fit on the same 
+    line; structred elements can fall into one or the 
+    other category; div (block elemnet) and span (inline
+    element) structure elements-->
+
+    <div>
+        <h1>Div 1</h1>
+        <p>Anything in this is grouped together like an 
+        invisible box</p>
+    </div>
+
+    <div>
+        <h1>Div 2</h1>
+        <p>Div 2 paragraph</p>
+    </div>
+
+    <p>This is some text, <span>here is text inside a span,
+        </span> and here is some more text</p> 
+    
+    <!--A span can be targeted with CSS or JavaScript-->
+
+<p><h1>Heading 1 is the biggest</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>heading 4</h4>
+<h5>heading 5</h5>
+<h6>heading 6 is the smallest</h6></p>
+<p>Lorem <strong>ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Euismod elementum nisi quis eleifend quam adipiscing. Massa massa ultricies mi quis hendrerit dolor magna eget. Sodales ut etiam sit amet nisl purus in mollis. Arcu non sodales neque sodales. Id leo in vitae turpis. Orci sagittis eu volutpat odio. Ut sem viverra aliquet eget sit amet tellus. Amet facilisis magna etiam tempor orci eu lobortis elementum nibh. Pretium viverra suspendisse potenti nullam ac tortor vitae. Enim sed faucibus turpis in eu mi bibendum. Dui vivamus arcu felis bibendum ut.
+
+    Neque laoreet suspendisse interdum consectetur. Ornare arcu odio ut sem nulla pharetra diam sit amet. Ut diam quam nulla porttitor. Curabitur gravida arcu ac tortor. Mattis rhoncus urna neque viverra justo nec ultrices dui. Neque volutpat ac tincidunt vitae semper quis. Erat velit scelerisque in dictum non consectetur. At erat pellentesque adipiscing commodo elit at imperdiet dui. Nulla porttitor massa id neque aliquam vestibulum. Nisl suscipit adipiscing bibendum est ultricies integer quis auctor. Quis lectus nulla at volutpat diam. Magna etiam tempor orci eu lobortis. Iaculis eu non diam phasellus. Sit amet nulla facilisi morbi tempus iaculis. Quis varius quam quisque id diam vel. Tincidunt arcu non sodales neque. Neque laoreet suspendisse interdum consectetur. Amet est placerat in egestas erat imperdiet sed euismod.
+    
+    Ultricies leo</strong> integer malesuada nunc vel risus commodo viverra. Amet luctus venenatis lectus magna fringilla urna. Est ante in nibh mauris cursus mattis. Pellentesque massa placerat duis ultricies. Odio ut enim blandit volutpat maecenas volutpat. Cras tincidunt lobortis feugiat vivamus at augue eget arcu dictum. Dictumst quisque sagittis purus sit. Fermentum et sollicitudin ac orci phasellus egestas tellus. Euismod lacinia at quis risus sed vulputate odio. Tellus in metus vulputate eu. Magna fermentum iaculis eu non. Ut porttitor leo a diam sollicitudin.
+    
+    In nisl nisi scelerisque eu ultrices vitae auctor. A lacus vestibulum sed arcu non. Laoreet id donec ultrices tincidunt arcu non. Odio morbi quis commodo odio aenean sed adipiscing. Id aliquet lectus proin nibh nisl condimentum. Velit scelerisque in dictum non consectetur a. Sem fringilla ut morbi tincidunt augue interdum. Morbi tristique senectus et netus et malesuada. Sed viverra ipsum nunc aliquet bibendum enim facilisis. Mattis molestie a iaculis at. Aliquam malesuada bibendum arcu vitae. Eget gravida cum sociis natoque penatibus. Gravida rutrum quisque non tellus orci ac. Dui ut ornare lectus sit amet est placerat in egestas. Massa sed elementum tempus egestas sed. Purus semper eget duis at tellus at. Libero id faucibus nisl tincidunt eget nullam non. Euismod elementum nisi quis eleifend quam adipiscing vitae proin.
+    
+    Purus non enim praesent elementum facilisis. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant. Quam vulputate dignissim suspendisse in est ante in nibh mauris. Morbi enim nunc faucibus a. Cras tincidunt lobortis feugiat vivamus. At imperdiet dui accumsan sit amet nulla facilisi. Blandit cursus risus at ultrices. Ut consequat semper viverra nam. Adipiscing at in tellus integer. Pellentesque pulvinar pellentesque habitant morbi tristique senectus. Non odio euismod lacinia at quis risus sed. Risus at ultrices mi tempus imperdiet nulla malesuada pellentesque. Velit ut tortor pretium viverra. Sed elementum tempus egestas sed sed risus. Est ultricies integer quis auctor. Et ligula ullamcorper malesuada proin libero nunc consequat interdum varius.
+    
+    </p>
+
+    <strong>the strong tag is an inline element; it doesn't change the flow of your block line elements</strong>
+
+
+    <!--Aria elements/tags-->
