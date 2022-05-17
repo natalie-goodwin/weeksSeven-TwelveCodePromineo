@@ -1,0 +1,90 @@
+<!----CSS is used for styling-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<!--Internal CSS allows everything to be written in one place within the HTML file-->
+<!--Selectors can be used to decide which element the style will apply to-->
+<style>
+body {
+    background-color: blue;
+}
+h1 {
+    color: goldenrod;
+}
+
+div {
+    background-color: cornflowerblue; 
+    border-style: solid; 
+    border-color: black; 
+    border-radius: 5px;
+}
+
+.shadow-text {
+    text-shadow: gray 1px 1px;
+}
+
+#large-paragraph {
+    font-size: 30px;
+}
+
+</style>
+
+<body style="background-color: blue"> <!--inline css styling: written inline with the element; good for testing purposes, 
+    but not good for multi-page sites or sites with a lot of styling; every element would have to be styled one at a time-->
+    <h1 style="color: goldenrod">Styled Heading</h1>
+    <div style="background-color: cornflowerblue; border-style: solid; border-color: black; border-radius: 5px;">
+        <p style="text-shadow: gray 1px 1px">This is a styled paragraph</p>
+        <p style="font-size: 30px;">This is another styled paragraph</p>
+    </div>
+</body>
+</html>
+
+<!--CSS Float: will move elements to the right-->
+
+img {
+    float: right
+}
+
+<!--Pseudo-classes: styled the same as other classes-->
+
+<div class="hov"></div>
+
+<ul class="every-odd"; class="every-even">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+</ul>
+
+<table>
+    <tr>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+    </tr>
+    <tr>
+        <td>A</td>
+        <td>B</td>
+        <td>C</td>
+    </tr>
+    <tr>
+        <td>D</td>
+        <td>E</td>
+        <td>F</td>
+    </tr>
+</table>
+
+<!--Box-Model: every HTML element can be thought of as a box
+with padding, border, and margin-->
+
+<div id="box-model">Content</div>

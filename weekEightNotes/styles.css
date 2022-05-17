@@ -1,0 +1,80 @@
+body {
+    background-color: blue;
+}
+h1 {
+    color: goldenrod;
+}
+
+div {
+    background-color: cornflowerblue; 
+    border-style: solid; 
+    border-color: black; 
+    border-radius: 5px;
+}
+
+.shadow-text {
+    text-shadow: gray 1px 1px;
+}
+
+#large-paragraph {
+    font-size: 30px;
+}
+
+#example {
+    color: gray;
+    background-color: blue;
+    border-style: dotted;
+    border-width: 3px;
+    border-color: yellow;
+    border-radius: 10px; 
+    height: 200px;
+    text-align: center;
+}
+
+.hov {
+    height: 200px;
+    width: 200px;
+    background-color: blue;
+}
+
+.hov:hover {
+    background-color: red;
+}
+
+.every-even li:nth-child(even) {
+    background-color: yellow;
+}
+
+.every-third li:nth-child(3n) {
+    background-color: red;
+}
+.every-odd li:nth-child(odd) {
+    background-color: green;
+}
+
+table {
+ border-collapse: collapse;
+ width: 100px;   
+}
+
+th, td {
+   padding: 8px; 
+   text-align: left;
+   border-bottom: 1px solid black;
+}
+
+tr:nth-child(even) {
+    background-color: gray
+}
+
+tr:hover {
+    background-color: chocolate;
+}
+
+#box-model {
+    padding: 20px;
+    border-style: solid;
+    border-width: 3px;
+    margin: 30px; 
+    background-color: orange;
+}
