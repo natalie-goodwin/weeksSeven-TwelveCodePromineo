@@ -1,0 +1,37 @@
+/* margin space around an element
+padding space between border of element 
+color
+background
+border
+font-family
+font-size
+text-decoration
+:hover
+display */
+
+#box1, #box2, #box3 {
+    height: 300px;
+    width: 300px;
+    border: 2px solid #333;
+    margin: 30px auto; /* centers element*/
+}
+
+#box1 {
+    background-color: coral;    /* top, right, bottom, left*/
+    padding: 20px; /* this impacts all around the paragraph*/ 
+    color: #fff;
+    font-weight: bold;
+    margin: 0px;
+}
+
+#box2 {
+    background-color: cornflowerblue;
+    
+
+}
+
+#box3 {
+    background-color: gold;
+
+
+}
