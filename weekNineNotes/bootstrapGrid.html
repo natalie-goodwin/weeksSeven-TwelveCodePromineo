@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Grid</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    
+</head>
+
+<style>
+  
+  div {
+    border-style: solid;
+    border-color: black;
+    
+  }
+
+</style>
+
+<body>
+    
+    <!--Container class: content inside is centered and 
+        horizontally padded; container class doesn't take 
+        up entire width of screen; but if you want to take 
+        up entire width of screen uses container-fluid 
+        class which takes up 100% width on all screen 
+        sizes; container and container-fluid are coming 
+        from Bootstrap CSS-->
+        
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                Content
+            </div>
+            <div class="col-lg-4">
+                Content
+            </div>
+            <div class="col-lg-2">
+                Content
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm">
+                Content
+            </div>
+            <div class="col-sm">
+                Content
+            </div>
+            <div class="col-sm">
+                Content
+            </div>
+            <div class="col-md-4">
+                Here's my 4
+            </div>
+            <div class="col-md-2">
+                Here's my 2
+            </div>
+        </div>    
+    </div>
+
+
+
+    
+
+
+
+
+    
+    <!--Bootstrap has a mobile-first design: this means 
+        that CSS is structured so that what is on the 
+        screen always looks good whether you are seeing 
+        it on a laptop or mobile device, and regardless 
+        of the size of the device; the CSS layout molds to 
+        the shape of the device; the page is responsive: it
+        changes the way the page displays and orders content 
+        based on the size of the device viewing the page;
+        responsive pages are made to look great on any 
+        device instead of displaying content the same way 
+        on a phone as on a tablet or laptop
+    
+        Grid System: uses a series of containers, rows, and 
+        columns to lay out and align the content; we put 
+        rows inside of containers, and columns inside of 
+        rows to help organize the content; the columns are 
+        responsive to the screensize based on how we define 
+        them-->
+</body>
+</html>
