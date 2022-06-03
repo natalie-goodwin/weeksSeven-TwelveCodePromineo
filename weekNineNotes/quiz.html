@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Components</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+    <style>
+        div {
+            border-style: solid;
+            border-color: black;
+            
+    }
+    </style>
+    
+     
+</head>
+
+
+<body class="container-fluid">
+    
+        <div class="row">
+            <div class="w-25 p-3" >
+               25% Width of Screen
+            </div>
+            <div class="w-50 p-1">
+                50% Width of Screen
+                <div class="row">
+                    <div class="w-75 p-1" >
+                        75% Width of Parent
+                    </div>
+                    <div class="w-25 p-1">
+                        25% Width of Parent
+                    </div>
+                </div>
+            </div>
+            <div class="w-25 p-3">
+                25% Width of Screen
+            </div>
+       </div>    
+    
+
+
+        
+    <!--Template should span the entire width of the screen.
+There should be three columns. 
+The left and right column should each take up 25% the width of the screen when the viewport is anything larger than small. 
+The middle column should take up the remaining 50% of the screen.
+Inside the middle column there should be two more columns, the left column taking up 75% of the width of it's parent and the right column 
+taking up the remaining 25% when the viewport is anything larger than small.
+All columns should stack vertically and respond when the viewport is small.-->
+
+
+</body>
+</html>
