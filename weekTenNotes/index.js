@@ -31,12 +31,12 @@ button.addEventListener('click', () => {
 
     let id = 0; 
 
-  document.getElementById('add').addEventListener('click', () => {
+  /*document.getElementById('add').addEventListener('click', () => {
         var parent = document.getElementById('paragraphs');
         var newElement = document.createElement('p');
         newElement.innerHTML = 'this is a new paragraph.';
         parent.appendChild(newElement);
-    });
+    });*/
 
     document.getElementById('add').addEventListener('click', () => {
         var parent = document.getElementById('paragraphs');
