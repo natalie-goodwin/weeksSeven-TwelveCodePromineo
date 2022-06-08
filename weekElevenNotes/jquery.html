@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <!--Installing JQuery:
+        In the file you want to install JQuery, 
+    * run npm init
+    * accept all defaults
+    * run npm i jquery
+    * should appear in your vscode
+
+    Testing to see if it works: 
+        In JS document, 
+    * console.log($('body'));
+    * check console which should show 'jQuery.fn.init(1)'
+    -->
+
+    <!--JQuery allows us to select DOM elements using 
+        CSS Selectors: class, element, and tag names; 
+        also follows same rules as selectors: id is 
+        denoted by '#'', class is denoted with a '.', 
+        and tag names are just the text of the tag itself. 
+        JQuery uses a function with the name of a $ symbol
+        to shorten code; to select a symbol we only need 
+        to type the $ symbol followed by parentheses and 
+        pass in the selector as a string-->
+        
+        <input type="text">
+        <p id="test">Hello World</p>
+        <div class="my-class">Div</div>
+        <ul>
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+        </ul>
+        
+
+        <!--Ways to interact with the elements: when JQuery
+        returns an element it doesn't use it the same 
+        way document.getElementById does; it returns it 
+        wrapped inside a jQuery object with additional built-
+        in methods for us to use to interact with that part of 
+        the DOM; these methods allow us to set the text, 
+        HTML, values, and attributes of existing elements; 
+        while other methods allow us to add, remove, hide, and 
+        show elements-->
+
+        
+
+
+
+    <!--Scripts-->
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="jquery.js"></script>
+</body>
+</html>
