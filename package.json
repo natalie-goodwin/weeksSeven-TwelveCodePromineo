@@ -1,0 +1,22 @@
+{
+  "name": "weeksseven-twelvecodepromineo",
+  "version": "1.0.0",
+  "description": "<p>\"# weeksSeven-TwelveCodePromineo\"</p>\r <p>Front End Technologies</p>\r <p>This is the repository for the notes and coding projects for weeks Seven-Twelve at Promineo Tech. </p>\r <p> Notes cover HTML, CSS, Bootstrap, and the DOM.</p>\r <p>No special projects in this repository; only notes. </p>\r <p> </p>\r <p> </p>\r <p> </p>\r <p> </p>\r <p> </p>\r <p> </p>\r <p> </p>\r <p> </p>\r <p> </p>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/natalie-goodwin/weeksSeven-TwelveCodePromineo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/natalie-goodwin/weeksSeven-TwelveCodePromineo/issues"
+  },
+  "homepage": "https://github.com/natalie-goodwin/weeksSeven-TwelveCodePromineo#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
+}
