@@ -15,6 +15,7 @@ class House {
         this.rooms.push(new Room(name, area)); /*this allows us to add rooms 
         to the above array*/
     }
+
 }
 
 class Room {
@@ -28,15 +29,15 @@ class HouseService {
     static url = 'https://ancient-taiga-31359.herokuapp.com/api/houses'; 
     /*root url for all the endpoints we are going to call the api */
 
-    /*methods for class: CRUD operations */
+    /*methods for class */
 
-    static getAllHouses() { /*gets all houses: retrieves data for all houses*/
-        return $.get(this.url); /*retrieves data using the url */
+    static getAllHouses() {
+        return $.get(this.url);
     }
 
     static getHouse(id) {
         return $.get(this.url + `/${id}`); /*method to get a specific house 
-        from the API; gets infor in url and specific hosue id: each hosue has an id */
+        from the API */
     }
     
     static createHouse(house) { /*this takes an instance 
@@ -63,7 +64,7 @@ class HouseService {
             is passed in as a parameter */
             contentType: 'application/json',
             type: 'PUT' /*this is the type of HTTP verb: PUT request */
-        }); /*PUT is used for updates */
+        });
     }
     static deleteHouse(id) { /* we only need the house id to tell the api
         this is the house we want to delete; if the house matches the id, 
@@ -85,11 +86,9 @@ class DOMManager {
 
     static getAllHouses() {
         HouseService.getAllHouses().then(houses => this.render(houses));
-    } /*gets all houses from the house service and renders to the DOM */
-    /*render doesn't yet exist, but it will re-render the DOM */
-   
-    static createHouse(name) { /*this function makes it possible to create houses with the 
-    add button created in the render(houses) function below  */
+    }
+
+    static createHouse(name) {
         HouseService.createHouse(new House(name))
         .then(() => { /*new instance of house */
             return HouseService.getAllHouses();
@@ -97,19 +96,15 @@ class DOMManager {
         .then((houses) => this.render(houses));
     }
  
-    static deleteHouse(id) { /*this function makes it possible to delete houses with the 
-    delete button created in the render(houses) function below  */
+    static deleteHouse(id) {
         HouseService.deleteHouse(id)
-        .then(() => { /*delete a house; then rerender the other houses
-        with return */
+        .then(() => { /*delete a house */
             return HouseService.getAllHouses();
         }) /*send HTTP request to get all existing houses */
         .then((houses) => this.render(houses));
     } /* re-render house DOM*/
 
-
-    static addRoom(id) { /*this function makes it possible to add rooms and areas with the 
-    add button created in the render(houses) function below  */
+    static addRoom(id) {
         for (let house of this.houses) {
             if (house._id == id) {
                 house.rooms.push(new Room($(`#${house._id}-room-name`).val(), $(`#${house._id}-room-area`).val()));
@@ -122,30 +117,28 @@ class DOMManager {
             }
         }
 
-    static deleteRoom(houseId, roomId) { /*this function makes it possible to delete rooms with the 
-    delete button created in the render(houses) function below  */
-        for (let house of this.houses) {
-             if (house._id == houseId) {
-                    for (let room of house.rooms) {
-                        if (room._id == roomId) {
-                            house.rooms.splice(house.rooms.indexOf(room), 1);
-                            HouseService.updateHouse(house)
-                            .then(() => {
-                                return HouseService.getAllHouses();
-                            })
-                            .then((houses) => this.render(houses));
-                        }
-                    }             
+        static deleteRoom(houseId, roomId) {
+            for (let house of this.houses) {
+                 if (house._id == houseId) {
+                        for (let room of house.rooms) {
+                            if (room._id == roomId) {
+                                house.rooms.splice(house.rooms.indexOf(room), 1);
+                                HouseService.updateHouse(house)
+                                .then(() => {
+                                    return HouseService.getAllHouses();
+                                })
+                                .then((houses) => this.render(houses));
+                            }
+                        }             
+                    }
                 }
-            }
-        }    
+            }    
 
     static render(houses) {
         this.houses = houses;
-        $('#app').empty(); /* empty means it clears everytime we re-render the 
+        $('#app').empty(); /* clears everytime we re-render the 
         DOM */
-        for(let house of houses) { /*because of prepend, newest house shows 
-        up on top; writing out html that will appear in the div*/
+        for(let house of houses) {
             $('#app').prepend(
                 `<div id="${house._id}" class="card">
                    <div class="card-header">
@@ -155,36 +148,46 @@ class DOMManager {
                     
                     <div class="card-body">
                         <div class="card">
-                           <div class="row">
-                             <div class="col-sm">
+                            <div class="row">
+                                <div class="col-sm">
                                 <input type="text" id="${house._id}-room-name" class="form-control" placeholder="Room Name">
-                        </div>                    
-                            <div class="col-sm">
-                                 <input type="text" id="${house._id}-room-area" class="form-control" placeholder="Room Area">
-                            </div>                    
-                    </div>  
-                    
-                    <button id="${house._id}-new-room" onclick="DOMManager.addRoom('${house._id}')" class="btn btn-primary form-control">Add</button>                 
-                    
-                    </div>            
-                    </div> 
-                </div> <br>` 
+                                </div>
+                                <div class="col-sm">
+                                <input type="text" id="${house._id}-room-area" class="form-control" placeholder="Room Area">
+                                </div>
+                            </div>
+                            <button id="${house._id}-new-room" onclick="DOMManager.addRoom('${house._id}')" class="btn btn-primary form-control">Add</button>
+                        </div>
+                    </div>
+                  </div><br>`                 
             );
-            for (let room of house.rooms) /*above we rendered each house, now we render each room */{
+            for (let room of house.rooms) {
                 $(`#${house._id}`).find('.card-body').append(
                     `<p>
-                    <span id="name-${room._id}"><strong>Name:</strong> ${room.name}</span>
-                    <span id="area-${room._id}"><strong>Area:</strong> ${room.area}</span>
-                    <button class="btn btn-danger" onclick="DOMManager.deleteRoom('${house._id}', '${room._id}')">Delete Room</button>`
+            <span id="name-${room._id}"><strong>Name:</strong> ${room.name}</span>
+            <span id="area-${room._id}"><strong>Area:</strong> ${room.area}</span>
+            <button class="btn btn-danger" onclick="DOMManager.deleteRoom('${house._id}', '${room._id}')">Delete Room</button>`
                 );
-            }
+            } 
         }
-    }
-}
+    }         
+}                         
 
 $('#create-new-house').click(() => {
     DOMManager.createHouse($('#new-house-name').val());
     $('#new-house-name').val('');
 });
 
-DOMManager.getAllHouses();
+
+
+DOMManager.getAllHouses();                    
+                        
+             
+               
+                   
+                   
+                    
+                    
+                
+         
+
